@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // Get the current path (e.g., /products/my-bike)
+        var path = window.location.pathname;
+        var search = window.location.search;
+        // Redirect to the shopify store with the exact same path
+        window.location.replace("https://shop.theelectricbikesuperstore.com" + path + search);
+    </script>
+</head>
+<body>
+    <p>Redirecting you to the correct page...</p>
+    <p>If you are not redirected, <a id="fallback-link" href="https://shop.theelectricbikesuperstore.com">click here</a>.</p>
+    <script>
+        document.getElementById("fallback-link").href = "https://shop.theelectricbikesuperstore.com" + path + search;
+    </script>
+</body>
+</html>
